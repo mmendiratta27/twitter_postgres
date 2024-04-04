@@ -7,10 +7,10 @@ files='
 test-data.zip
 '
 
-echo 'load normalized'
-for file in $files; do
+#echo 'load normalized'
+#for file in $files; do
     # call the load_tweets.py file to load data into pg_normalized
-done
+#done
 
 echo 'load denormalized'
 for file in $files; do
