@@ -161,10 +161,10 @@ def insert_tweet(connection,tweet):
                 'statuses_count':tweet['user']['statuses_count'],
                 'protected':tweet['user']['protected'],
                 'verified':tweet['user']['verified'],
-                'screen_name':tweet['user']['screen_name'],
-                'name':tweet['user']['name'],
-                'location':tweet['user']['location'],
-                'description':tweet['user']['description'],
+                'screen_name':remove_nulls(tweet['user']['screen_name']),
+                'name':remove_nulls(tweet['user']['name']),
+                'location':remove_nulls(tweet['user']['location']),
+                'description':remove_nulls(tweet['user']['description']),
                 'withheld_in_countries':tweet['user'].get('withheld_in_countries', None)}
         )
 
